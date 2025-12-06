@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Solid colorful background */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #1e40af; /* strong blue */
+    min-height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Card */
+.container {
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.8rem 1.6rem;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.6);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 1.4rem;
+    color: #111827;
+}
+
+/* Input row */
+.input-group {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+#quoteInput {
+    flex: 1;
+    padding: 0.8rem 0.95rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+#quoteInput::placeholder {
+    color: #9ca3af;
+}
+
+#quoteInput:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Add button – bright orange */
+#addBtn {
+    padding: 0.8rem 1.2rem;
+    background-color: #fb923c;
+    color: #111827;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+#addBtn:hover {
+    background-color: #f97316;
+}
+
+/* List */
+#quoteList {
+    list-style: none;
+    max-height: 360px;
+    overflow-y: auto;
+    margin-top: 0.4rem;
+}
+
+/* Quote item – colorful blocks */
+.quote-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 10px;
+    background-color: #eef2ff;       /* light indigo */
+    border-left: 5px solid #f97316;  /* orange strip */
+}
+
+/* Colored dot on each quote */
+.quote-item::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background-color: #22c55e; /* green dot */
+    margin-right: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+/* Wrap text and button in a flex container */
+.quote-text {
+    font-size: 0.95rem;
+    color: #111827;
+    flex: 1;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+/* Delete button – red/orange */
+.delete-btn {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 0.6rem;
+}
+
+.delete-btn:hover {
+    background-color: #fecaca;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1.6rem 1.3rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    #addBtn {
+        width: 100%;
+    }
+}
